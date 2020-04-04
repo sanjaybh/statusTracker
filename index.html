@@ -1,0 +1,114 @@
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Tracker</title>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/linq/linq.min.js"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./node_modules/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/alaram.css">
+    <script src="./scripts/alaram.js" defer></script>
+	
+</head>
+
+<body style="display: block;">
+    <div style="display: flex;margin-bottom: 5px;">
+        <div class="tab btn-sm btn-primary" onclick="showDivs('master')">Master</div>
+        <div class="tab btn-sm btn-primary" onclick="showDivs('stats1')">Stats 1</div>
+        <div class="tab btn-sm btn-primary" onclick="showDivs('stats2')">Stats 2</div>
+    </div>
+    <div class="al-div table-responsive">
+        <div class="statsDiv master">
+            <table id="prodTable" class="table table-sm table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Product Id</th>
+                        <th>Product Name</th>
+                        <th>Proposal Date</th>
+                        <th>Delivered Date</th>
+                        <th>Current Status</th>
+                        <th>Priority</th>
+                        <th>Support User</th>
+                        <th>Remarks</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+            <div style="display: inline-grid;">
+                <div class="btn-cu" onclick="appendData()">Add New</div>
+                <!-- <div class="btn-cu" onclick="showStatistics()">Show Statistics</div> -->
+            </div>
+        </div>
+
+        <div class="statsDiv stats1">
+            <div>
+                <table id="statsStatus" class="table table-sm table-bordered">
+                    <thead class="" id="statsStatusTr" style="    background-color: yellow;">
+                    </thead>
+                    <tbody id="tbodyStatusStats">
+
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table id="statsUser" class="table table-sm table-bordered">
+                    <thead class="" id="statsUserTr" style="    background-color: yellow;">
+                    </thead>
+                    <tbody id="tbodyUserStats">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="statsDiv stats2" style="width:50%">
+            <div>
+                <table id="alarmFlag1" class="table table-sm table-bordered">
+                    <thead style="background-color: #e0af1b; text-align: center;">
+                        <tr>
+                            <th colspan="3"> #Ticket surpassed date</th>
+                        </tr>
+                    </thead>
+                    <thead class="thead-dark">
+                        <tr style="color: black;">
+                            <th style="background-color: white;color: black;">White</th>
+                            <th style="background-color: #eca218;color: black;">Amber</th>
+                            <th style="background-color: red;color: black;">Red</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyflagCount">
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table id="alarmFlag2" class="table table-sm table-bordered">
+                    <thead style="background-color: yellow; text-align: center;">
+                        <tr>
+                            <th colspan="2">Current Status (<span id="dispTodaysDt"></span>)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyCStatus">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="error-div hide">
+        <i class="fa fa-times" aria-hidden="true" style="position: absolute;right: 10px;top: 6px;cursor: pointer;"
+            onclick="closeError()"></i>
+        <ul>
+
+        </ul>
+    </div>
+</body>
+
+
+
+</html>

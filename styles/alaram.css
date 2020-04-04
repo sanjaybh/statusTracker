@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 20px;
+}
+
+.table-bordered {
+	border: 2px dotted blue !important
+}
+.al-div {
+    width: 98%;
+}
+
+.al-div>table {
+    border: 1px solid #ccc;
+}
+
+.disabled {
+    border: none;
+    pointer-events: none;
+}
+
+.contentEd {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+select {
+    width: 99%;
+    border: none;
+    margin: 1px;
+}
+
+.warning {
+    background-color: yellow;
+}
+
+.btn-cu {
+    padding: 3px 10px;
+    background: #bb505a;
+    display: inline;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.error-div {
+    position: absolute;
+    background: aliceblue;
+    padding: 20px 10px;
+    width: 400px;
+    box-shadow: 0px 1px 10px #888888;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.error-div ul {
+    list-style: none;
+}
+
+.tab {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    border: 1px solid black !important;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 5px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}

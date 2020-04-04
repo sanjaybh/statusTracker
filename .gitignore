@@ -1,0 +1,12 @@
+# PLATFORM
+# ========
+
+# - Do not allow installed node modules to be committed. Doing `npm install -d` will bring them in root or other places.
+node_modules
+
+# - Do not commit any log file from anywhere
+*.log
+
+# - Prevent addition of OS specific file explorer files
+Thumbs.db
+.DS_Store
